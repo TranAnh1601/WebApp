@@ -2,16 +2,11 @@
 
 namespace WebApp.Controllers
 {
-	public class ProductController : Controller
+	public class CheckoutController : Controller
 	{
 		public IActionResult Index()
 		{
 			return View();
 		}
-		public IActionResult Detail()
-		{
-			return View();
-		}
-
 	}
 }

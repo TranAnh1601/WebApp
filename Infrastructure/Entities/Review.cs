@@ -12,11 +12,11 @@ namespace Infrastructure.Entities
 	public class Review : BaseEntity
 	{
 
-		[MaxLength(1000)]
+		[Column(TypeName = "nvarchar(1000)")]
 		public string ReviewerName { get; set; }
 
-		[MaxLength(1000)]
-		public string Email { get; set; }
+		[Column(TypeName = "nvarchar(1000)")]
+		public string? Email { get; set; }
 
 		[Column(TypeName = "ntext")]
 		public string Content { get; set; }
@@ -27,5 +27,6 @@ namespace Infrastructure.Entities
 		public Product Product { get; set; }
 
 	}
+
 
 }

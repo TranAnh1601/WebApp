@@ -8,17 +8,18 @@ using System.Threading.Tasks;
 namespace Infrastructure.Entities
 {
 	[Table("ProductImages")]
-	public class ProductImage
+	public class ProductImage : BaseEntity
 	{
 		[Column(TypeName = "ntext")]
 		public string ImageLink { get; set; }
 
 		[Column(TypeName = "ntext")]
-		public string Alt { get; set; }
+		public string? Alt { get; set; }
 
 		[ForeignKey("Image-Product")]
 		public Guid ProductId { get; set; }
 		public Product Product { get; set; }
 	}
+
 
 }

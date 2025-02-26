@@ -11,7 +11,7 @@ namespace Infrastructure.Entities
 	[Table("Products")]
 	public class Product : BaseEntity
 	{
-		[MaxLength(1000)]
+		[Column(TypeName = "nvarchar(1000)")]
 		public string Name { get; set; }
 
 		[Column(TypeName = "decimal(18,2)")]
@@ -24,8 +24,7 @@ namespace Infrastructure.Entities
 		[Column(TypeName = "ntext")]
 		public string Description { get; set; }
 
-		//config khoa ngoai
-		[ForeignKey("Product-Category")]	
+		[ForeignKey("Product-Category")]
 		public Guid CategoryId { get; set; }
 
 		[Column(TypeName = "decimal(18,2)")]
