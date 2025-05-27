@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Infrastructure.IService;
+using Infrastructure.Model.Categories;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebApp.Models;
 
@@ -7,16 +9,21 @@ namespace WebApp.Controllers
 	public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
+		private readonly ICategoryService _categoryService;
 
-		public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, ICategoryService categoryService)
 		{
+			_categoryService = categoryService;
 			_logger = logger;
 		}
 
 		public IActionResult Index()
 		{
+          
+            //var model = _categoryService.GetCategories(); // Lấy danh mục từ DB
+            //return View(model); // Trả về Model
 			return View();
-		}
+        }
 
 		public IActionResult Privacy()
 		{
