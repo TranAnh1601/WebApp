@@ -1,0 +1,9 @@
+﻿@model List<Infrastructure.Model.Categories.CategoryViewModel>
+
+<select class="input-select" id="category-select">
+    <option value="">All Categories</option>
+      @foreach (var item in Model)
+    {
+    <option value="@item.Id">@item.Name</option>
+    }
+</select>

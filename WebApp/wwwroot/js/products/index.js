@@ -35,7 +35,6 @@ function init() {
 function filterCategory() {
     _model.PageIndex = 1
     _model.CategoryId = $(this).val();
-    console.log("Category changed:", _model.CategoryId);
     loadProduct(_model)
 }
 

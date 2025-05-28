@@ -9,6 +9,7 @@ namespace Infrastructure.IService
 {
 	public interface IProductService
 	{
-		List<ProductViewModel> SearchProduct(ProductFilterModel filter);
+        ProductDetailViewModel GetProductDetail(Guid productId);
+        List<ProductViewModel> SearchProduct(ProductFilterModel filter);
 	}
 }

@@ -19,10 +19,12 @@ namespace WebApp.Controllers
 
 		public IActionResult Index()
 		{
-          
+
+            //var categories = _categoryService.GetCategories(); // hoặc lấy từ database
+            //return View(categories);
             //var model = _categoryService.GetCategories(); // Lấy danh mục từ DB
             //return View(model); // Trả về Model
-			return View();
+            return View();
         }
 
 		public IActionResult Privacy()
