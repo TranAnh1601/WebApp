@@ -16,6 +16,7 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkSto
 
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IBillService, BillService>();
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromHours(1);

@@ -14,10 +14,9 @@ function confirmRemove() {
     var productName = $(this).attr('data-name')
     bootbox.confirm(`are you sure to delete ${productName}`, function (result) {
         if (result) {
-
             removeItem(productId)
         }
-    })
+    }) 
 }
 function removeItem(productId) {
 

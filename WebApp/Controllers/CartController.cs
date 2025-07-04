@@ -86,6 +86,5 @@ namespace WebApp.Controllers
                 cart.Add(cartItem);
             }
         }
-
     }
 }
